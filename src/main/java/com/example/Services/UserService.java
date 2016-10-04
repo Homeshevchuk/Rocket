@@ -20,6 +20,7 @@ public class UserService {
 
     }
     public User getUser(String name){
-        return userDao.findByName(name);
+        User user = userDao.findByName(name);
+        return user;
     }
 }

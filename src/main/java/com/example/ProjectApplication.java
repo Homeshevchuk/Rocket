@@ -34,10 +34,10 @@ public class ProjectApplication implements CommandLineRunner {
         team.setLead(user1);
         team.addUser(user2);
         team.addUser(user3);
-
         teamRepository.save(team);
-        System.out.println("done");
 
+       User asd =  userDao.findByName("Nekich");
+        System.out.println("done");
     }
 
     private User createUser(String name, String password) {

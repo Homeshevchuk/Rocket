@@ -8,7 +8,6 @@ import javax.persistence.OneToOne;
 /**
  * Created by PC on 24.09.2016.
  */
-@Entity
 public class Project {
     @Id
     @GeneratedValue
