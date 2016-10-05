@@ -57,7 +57,7 @@ a:focus {
   margin: 0px;
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  position: fixed;
+  position: static;
   width: 100%;
   border-radius: 0;
   border: none;
@@ -361,4 +361,13 @@ body {
 }
 .form{
   width: 100%;
+}
+.mainDiv{
+  display: flex;
+  flex-direction: column;
+}
+.regForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
