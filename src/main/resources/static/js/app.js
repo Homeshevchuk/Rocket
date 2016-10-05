@@ -4,7 +4,7 @@
             function($routeProvider) {
                 $routeProvider.
                 when('/', {
-                    templateUrl: 'html/regform.html',});
+                    templateUrl: 'html/mainPage.html',});
             }]);
 
     scotchApp.controller('mainController', function($scope,$http) {
