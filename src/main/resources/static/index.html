@@ -9,7 +9,7 @@
     <!-- load angular via CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
     <script src="ui-bootstrap-tpls-2.1.4.min.js"></script>
 
     <!--Fonts-->
@@ -21,58 +21,12 @@
 </head>
 
 <!-- define angular controller -->
-<body ng-controller="mainController">
+<body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-ultrabar">
-    <div class="container-fluid">
-        <div class="navbar-header logoSmall">
-            <img src="img/cactusmall.png" class="cactusmall">
-            <a class="navbar-brand" style="color: #02a031" href="#">CACTUS X</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a style="color: #02a031" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        </ul>
-    </div>
-</nav>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<header class="intro">
-    <div class="intro-body">
-        <div class="row">
-            <div class="side">
-            </div>
-            <div class="center">
-                <h1 class="brand-heading name">Cactus X</h1>
-                <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                    <br>Created by Start Bootstrap.</p>
-            </div>
-            <div class="side" ng-hide="authenticated">
-                <form class="form">
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                        <input  ng-model="user.name" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="exampleInputPassword3">Password</label>
-                        <input type="password" ng-model="user.password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" style="color: #02a031"> Remember me
-                        </label>
-                    </div>
-                    <button type="submit" ng-click="auth()"class="btn btn-primary">Sign in</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</header>
+<div ng-view></div>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

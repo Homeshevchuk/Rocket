@@ -1,4 +1,12 @@
- var scotchApp = angular.module('scotchApp', ['ui.bootstrap']);
+ var scotchApp = angular.module('scotchApp', ['ui.bootstrap','ngRoute']);
+
+    scotchApp.config(['$routeProvider',
+            function($routeProvider) {
+                $routeProvider.
+                when('/', {
+                    templateUrl: 'html/regform.html',});
+            }]);
+
     scotchApp.controller('mainController', function($scope,$http) {
         $http({
             method: 'GET',
