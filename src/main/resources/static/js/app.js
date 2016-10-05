@@ -9,6 +9,16 @@
                     .when('/regform', {
                         templateUrl: 'html/regform.html'
                     });
+    scotchApp.config(['$routeProvider','$locationProvider',
+            function($routeProvider,$locationProvider) {
+                $locationProvider.html5Mode({
+                    enabled:true,
+                    requireBase:false
+                });
+                $routeProvider.
+                when('/', {
+                    templateUrl: 'html/mainPage.html',});
+
             }]);
 
     scotchApp.controller('mainController', function($scope,$http) {
