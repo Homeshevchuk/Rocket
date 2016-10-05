@@ -1,21 +1,5 @@
-<body ng-controller="mainController">
-
+<div ng-controller="mainController">
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-ultrabar">
-    <div class="container-fluid">
-        <div class="navbar-header logoSmall">
-            <img src="../img/cactusmall.png" class="cactusmall">
-            <a class="navbar-brand" style="color: #02a031" href="#">CACTUS X</a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a style="color: #02a031" href="/#/regform"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        </ul>
-    </div>
-</nav>
-
 <header class="intro">
     <div class="intro-body">
         <div class="row">
@@ -29,26 +13,17 @@
             <div class="side">
                 <form class="form">
                     <div class="form-group">
-                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                        <label class="sr-only" for="exampleInputEmail3">Ім'я</label>
+                        <input type="name" ng-model="user.name" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="exampleInputPassword3">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                        <label class="sr-only" for="exampleInputPassword3">Пароль</label>
+                        <input type="password"  ng-model="user.password" class="form-control" id="exampleInputPassword3" placeholder="Password">
                     </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox" style="color: #02a031"> Remember me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button type="submit" ng-click="auth()" class="btn btn-primary">Увійти</button>
                 </form>
             </div>
         </div>
     </div>
 </header>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-</body>
+</div>
