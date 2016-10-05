@@ -1,27 +1,29 @@
- var scotchApp = angular.module('scotchApp',["ngRoute"]);
-    scotchApp.config(function ($routeProvider) {
-        $routeProvider
-            .when("/12", {
-                templateUrl : "mainPage.html"
-            });
-        
-    });
+ var scotchApp = angular.module('scotchApp', ['ui.bootstrap']);
     scotchApp.controller('mainController', function($scope,$http) {
-        $scope.counter = 0;
-        $scope.user = {
-            name:'',
-            password:''
-        }
-        $scope.send = function () {
+        $http({
+            method: 'GET',
+            url: '/api/user',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        }).then(function successCallback(response) {
+            $scope.authenticated = true;
+        }, function errorCallback(response) {
+            $scope.authenticated = false;
+        });
+        $scope.auth = function () {
+            var auth = btoa($scope.user.name+':'+$scope.user.password);
             $http({
-                method: 'POST',
-                url: '/registration',
-                data: $scope.user
+                method: 'GET',
+                url: '/api/user',
+                headers: {
+                    'Authorization':'Basic '+auth,
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
             }).then(function successCallback(response) {
                 console.log(response);
             }, function errorCallback(response) {
                 console.log(response);
             });
         }
-
     });
