@@ -12,10 +12,14 @@
                     })
                     .when('/regform', {
                         templateUrl: 'html/regform.html'
-                    });
+                    })
+                    .when('/userpage', {
+                    templateUrl: 'html/userpage.html'
+                });
+
             }]);
 
-    scotchApp.controller('mainController', function($scope,$http) {
+    scotchApp.controller('mainController', function($scope,$http,$location) {
         $http({
             method: 'GET',
             url: '/api/user',
@@ -38,8 +42,24 @@
                 }
             }).then(function successCallback(response) {
                 console.log(response);
+                $location.path('/userpage');
             }, function errorCallback(response) {
                 console.log(response);
             });
         }
     });
+
+    scotchApp.controller('userpageController', function ($scope,$http) {
+     $http({
+         method: 'GET',
+         url: '/api/user',
+         headers: {
+             'X-Requested-With': 'XMLHttpRequest'
+         }
+     }).then(function successCallback(response) {
+         $scope.name = response.data.name;
+         $scope.teams = response.data.teams;
+     }, function errorCallback(response) {
+         console.log('something wrong');
+     });
+    })
