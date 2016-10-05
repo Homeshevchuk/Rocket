@@ -2,9 +2,13 @@
 
     scotchApp.config(['$routeProvider',
             function($routeProvider) {
-                $routeProvider.
-                when('/', {
-                    templateUrl: 'html/mainPage.html',});
+                $routeProvider
+                    .when('/', {
+                    templateUrl: 'html/mainPage.html'
+                    })
+                    .when('/regform', {
+                        templateUrl: 'html/regform.html'
+                    });
             }]);
 
     scotchApp.controller('mainController', function($scope,$http) {
