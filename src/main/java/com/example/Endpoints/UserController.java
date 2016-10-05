@@ -18,7 +18,7 @@ import java.security.Principal;
 public class UserController {
     @Autowired
     UserService service;
-    @RequestMapping(value = "/registration", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/registration", method = RequestMethod.POST)
     @ResponseBody
     public HttpStatus register(@RequestBody User user) {
         try {
@@ -29,7 +29,7 @@ public class UserController {
         return HttpStatus.ACCEPTED;
     }
     @JsonView(JsonViews.UserSummary.class)
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/user", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<User> getUser(Principal principal) {
       User result;
