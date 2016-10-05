@@ -1,33 +1,18 @@
 <div class="mainDiv">
     <!--NavBar-->
-    <nav class="navbar navbar-inverse navbar-ultrabar">
-        <div class="container-fluid">
-            <div class="navbar-header logoSmall">
-                <img src="./img/cactusmall.png" class="cactusmall">
-                <a class="navbar-brand" style="color: #02a031" href="#">CACTUS X</a>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a style="color: #02a031" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="regForm">
+    <form>
         <div class="form-group">
-            <label for="usr">ФИО:</label>
-            <input type="text" class="form-control" id="usr">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
         </div>
         <div class="form-group">
-            <label for="usr">Email:</label>
-            <input type="text" class="form-control" id="usr">
-        </div>
-        <div class="form-group">
-            <label for="pwd">Пароль:</label>
+            <label for="pwd">Password:</label>
             <input type="password" class="form-control" id="pwd">
         </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 
-    </div>
 </div>

@@ -22,11 +22,22 @@
 
 <!-- define angular controller -->
 <body>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<nav class="navbar navbar-inverse navbar-ultrabar">
+    <div class="container-fluid">
+        <div class="navbar-header logoSmall">
+            <img src="./img/cactusmall.png" class="cactusmall">
+            <a class="navbar-brand" style="color: #02a031" href="#">CACTUS X</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a style="color: #02a031" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        </ul>
+    </div>
+</nav>
 <div ng-view></div>
-
-
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
