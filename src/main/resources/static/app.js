@@ -1,4 +1,11 @@
- var scotchApp = angular.module('scotchApp', []);
+ var scotchApp = angular.module('scotchApp',["ngRoute"]);
+    scotchApp.config(function ($routeProvider) {
+        $routeProvider
+            .when("/12", {
+                templateUrl : "mainPage.html"
+            });
+        
+    });
     scotchApp.controller('mainController', function($scope,$http) {
         $scope.counter = 0;
         $scope.user = {
